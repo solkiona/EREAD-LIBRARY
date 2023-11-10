@@ -1,0 +1,516 @@
+#basesection1img{
+    background-image: url("../assets/images/base.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 100;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+ 
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+#basesection1img > p:nth-child(1){
+color: #FFF;
+font-family: Josefin Sans;
+font-size: 96px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+#basesection1img > p:nth-child(2){
+color: #FFF;
+font-family: Josefin Sans;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+#basesection2{
+ /* border: 2px solid green; */
+   padding: 100px;
+  
+   /* height: 100vh; */
+}
+
+#basesection2container{
+    /* border: 2px solid green; */
+    display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   width: fit-content;
+   margin-left: 100px;
+
+}
+#basesection2right{
+    /* border: 2px solid green; */
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   margin-top: 20px;
+   margin-left: 50px;
+   gap: 10px;
+   flex-shrink: 0;
+
+}
+
+#basesection2 > #basesection2container > #basesection2right>p:nth-child(1){
+
+color: #200C6E;
+font-family: Josefin Sans;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+/* border: 2px solid red; */
+padding: 0px;
+}
+
+#nameLove{
+    /* border: 2px solid red; */
+    width: 150px;
+    display: flex;
+    gap: 10px;
+    padding-left: 0px;
+}
+#basesection2 > #basesection2container> #basesection2right > p:nth-child(2){
+color: #F69F2B;
+font-family: Josefin Sans;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+#basesection2img{
+    background-image: url("../assets/images/hooked.png");
+    height: 550px;
+    width: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* border: 2px solid red; */
+    margin-top: 20px;
+    flex-shrink: 1;
+
+}
+#basesection2rightTXT{
+    width: 500px;
+    /* border: 2px solid red; */
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 15px;
+    font-family: poppins;
+}
+
+#download{
+    padding: 16px;
+    border-radius: 8px;
+    background: #F69F2B;
+    box-sizing: border-box;
+    border: none;
+color: #200C6E;
+text-align: justify;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-top: 10px;
+}
+
+#basesection3{
+  
+    /* border: 2px solid red; */
+    padding-left: 200px;
+    /* border: 2px solid red; */
+    height:  fit-content;
+    width: fit-content;
+    /* margin-top: 100px; */
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#basesection3 > .contentHolder3{
+    /* border: 2px solid green; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 50%;
+    margin-bottom: 50px;
+    height: fit-content;
+
+    /* padding: 10px; */
+}
+#basesection3 > p{
+    color: #200C6E;
+    text-align: justify;
+    font-family: Josefin Sans;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* margin-left: 100px; */
+    margin-top: 0px;
+    cursor: hover;
+    text-decoration: underline 8px #F99C22;
+
+}
+
+#basesection3 > .contentHolder3 > .flex3 > .flex3Wrapper {
+    /* border: 2px solid red; */
+    margin-top: 0px;
+}
+
+#basesection3 > .contentHolder3 > .flex3 > .flex3Wrapper > img{
+    /* border: 2px solid red; */
+    margin-top: 20px;
+    height: 120px;
+    width: 120px;
+}
+
+#basesection3 > .contentHolder3 > .flex3 > .flex3Wrapper {
+    /* height: 150px; */
+}
+
+.section5Text > .nameLove{
+    /* border: 2px solid red; */
+    padding: 0px;
+    font-size: 5px;
+    gap: 3px;
+}
+
+#reviewTXT{
+    border-top: 1px solid gray;
+    margin-top: 20px;
+    /* padding-bottom: 50px; */
+    /* border: 2px solid red; */
+
+}
+/* #basesection3 > .contentHolder3 > .flex3 > .nameLove{
+    padding-top: 10px;
+    border-bottom: 0.1px solid gray;
+    padding-bottom: 20px;
+
+} */
+
+#basesection3 > p:hover{
+}
+
+
+
+
+#basesection4{
+    height: fit-content;
+    width: auto;
+    background-color: #200C6E;
+    padding-left: 200px;
+    padding-right: 200px;
+
+
+}
+
+#basesection4pcontainer >p:first-child{
+
+padding-top: 50px;
+/* padding-bottom: 50px; */
+color: #FFF;
+font-family: Josefin Sans;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 2px;
+}
+
+#basesection4pcontainer >p:nth-child(2){
+color: #FFF;
+font-family: Josefin Sans;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 2px;
+padding-top: 10px;
+padding-bottom: 50px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* border: 2px solid white; */
+    padding-bottom: 50px;
+    width: 60%;
+}
+form > label {
+
+color: #FFF;
+font-family: Poppins;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 2px;
+}
+form > input{
+border-radius: 8px;
+border: 2px solid #F69F2B;
+height: 72px;
+text-align: left;
+background-color: transparent;
+color: white;
+}
+
+#profileIcon{
+    stroke: black;
+}
+
+
+#profileIcon:hover{
+    stroke: #200C6E;
+    cursor: pointer;
+}
+
+#dropdown{
+    background-color: #200C6E;
+    color: white;
+    height: 50px;
+    width: 70px; 
+    border-radius: 3px;
+    right: -22px;
+    top: 40px;
+    position: absolute;
+    z-index: 1;
+    display: none;
+   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    justify-content: center;
+}
+#dropdown > a {
+    color: white;
+    z-index: 1;
+    margin-top: 5px;
+    position: absolute;
+    top: 5px;
+    /* border-bottom: 1px solid grey; */
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5px;
+    /* margin-left: 5px; */
+    cursor: pointer
+}
+
+.mouth{
+    width: 0;
+    height: 0;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-bottom: 50px solid #200C6E;
+    margin-top: -9px;
+}
+
+#dropdown2{
+    background-color: white;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#dropdown2 > a{
+    z-index: 1;
+    top: -20px;
+    position: relative;
+    /* border: 2px solid red; */
+}
+.mouth2{
+    width: 0;
+    height: 0;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    border-bottom: 50px solid white;
+    margin-top: -9px;
+}
+.visible{
+    display: none;
+}
+
+form > #comment{
+height: 200px;
+border-radius: 8px;
+border: 2px solid #F69F2B;
+}
+
+form > #submit{
+    background-color: white;
+    color:#200C6E;
+    border: none;
+    width: fit-content;
+    padding: 16px 32px;
+
+    color: #200C6E;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 2px;
+}
+
+@media screen and (min-width: 1500px){
+
+    #basesection1img{
+        background-image: url("../assets/images/base.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 400px;
+        width: 100;
+        padding: 100px;
+        /* border: 2px solid red; */
+        /* display: block */
+     
+        
+    }
+
+}
+@media screen and (max-width: 920px){
+  
+    #basesection2{
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        margin-left: 0px;
+
+    }
+
+    #basesection1img{
+        background-image: url("../assets/images/base.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 700px;
+        width: 100;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+     
+        
+    }
+
+    #basesection3 > .contentHolder3{
+        /* border: 2px solid green; */
+        margin-top: 50px;
+        /* margin-bottom: 50px; */
+        width: 60vw;
+    }
+
+
+    #basesection4{
+        height: fit-content;
+        width: auto;
+        background-color: #200C6E;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 50px;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        /* border: 2px solid white; */
+        width: 100%;
+    }
+   
+}
+
+
+
+
+@media screen and (max-width: 700px){
+    
+    #basesection2{
+        padding: 5px;
+    }
+     #basesection2container{
+        /* border: 2px solid red; */
+        display: flex;
+       justify-content: center;
+       /* align-items: center; */
+       flex-wrap: wrap;
+       width: fit-content;
+       flex-direction: column;
+       margin-left: 10px;
+       margin-right: 10px;
+    
+    }
+
+     #basesection2img{
+        background-image: url("../assets/images/hooked.png");
+        height: 300px;
+        width: 250px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* border: 2px solid red; */
+        margin-top: 20px;
+        margin-left: 30px;
+    
+    }
+
+    #basesection2right{
+        /* border: 2px solid green; */
+       padding: 20px;
+       display: flex;
+       flex-direction: column;
+       margin-top: 20px;
+       margin-left: 20px;
+       gap: 10px;
+       flex-shrink: 0;
+    
+    }
+
+    #basesection2rightTXT{
+        width: 300px;
+        /* border: 2px solid red; */
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    #basesection3{
+        /* height: 200px; */
+        /* border: 2px solid red; */
+        padding-left: 50px;
+        /* display: flex;
+        justify-content: center; */
+        /* align-items: center; */
+    }
+    #basesection3 > p{
+        color: #200C6E;
+        text-align: justify;
+        font-family: Josefin Sans;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-left: 10px;
+        margin-top: 20px;
+        text-decoration: none;
+        border-top: 1px solid grey;
+        width: 70vw;
+    }
+
+    #basesection3 > .contentHolder3{
+        /* border: 2px solid green; */
+        /* margin-top: 50px; */
+        margin-bottom: 50px;
+        width: 70vw;
+    }
+}

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <link rel="stylesheet" href="{{url_for('static', filename='./assets/homestyles.css')}}">
+
+        <link rel="stylesheet" href="{{url_for('static', filename ='./assets/dashboard.css')}}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+        <script src="https://kit.fontawesome.com/475ea9865d.js" crossorigin="anonymous"></script>
+
+
+       
+        <script src="{{url_for('static', filename ='./assets/homescripts.js')}}" > </script>
+
+        <script src="https://kit.fontawesome.com/475ea9865d.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+       <nav id="nav">
+
+        <div id="logo" onclick="home()">
+     </div>
+
+        <div id="menuSwitch"  onclick = "switchmenu()">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </div>
+
+
+        <div id="menu">
+
+        </div>
+
+       </nav>
+
+       
+
+<main id="main">
+
+<div id="plside" >
+    <div id="lside">
+
+        <div id="profile">
+            <h1> 
+                {%if user%}
+                {{user.username.split(' ')[0][:1]}}
+                {{user.username.split(' ')[1][:1]}}
+                {%endif%}
+            </h1>
+        </div>
+
+        <div id="parentlside">
+            <div class="lsideItem">
+                <img src="{{url_for('static', filename='./assets/images/dashboard.png')}}" /> <a href="{{url_for('dashboard')}}"> Dashboard </a>
+            </div>
+
+            <div class="lsideItem">
+                <img src="{{url_for('static', filename='./assets/images/Dbook.png')}}" /> <a href=""> Add Books </a>
+            </div>
+
+            <div class="lsideItem">
+                <img src="{{url_for('static', filename='./assets/images/Favorite.png')}}" /> <a href="{{url_for('favorite')}}"> Favourite </p>
+            </div>
+
+        <!--
+
+            <div class="lsideItem">
+                <img src="../static/assets/images/Settings.png" /> <p> Setting </p>
+            </div> 
+
+
+        --> 
+
+
+            <div class="lsideItem">
+                <img src="../static/assets/images/logout.png" /> <a  id="logout" href="{{url_for('login.logout')}}"> Log Out </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="rside">
+    <div id="search">
+        <input type="text" placeholder="Search for books" >
+        <i class="fa-solid fa-magnifying-glass" style="color: rgba(233, 226, 226, 0.5);"></i>
+    </div>
+    
+    <div id="search-results">
+
+    
+    </div>
+
+    
+    <div id="topbookcontainer">
+
+        <p id="topicks"> Top Picks </p>
+        <div id="Topbooks">
+        
+            <div class="books">
+                <div class="TbookContent" hx-trigger='click' >
+                    <a> <img src="{{url_for('static', filename= './assets/images/datastrategy.png')}}">
+                    </a>
+                    
+                </div>
+                <div class="nameLike">
+                    <p> Data <br> Strategy </p> 
+                
+                    <i class="fa-regular fa-heart"></i>
+    
+                </div>
+                <p> Bernard Marr</p>
+                <div class="nameLove">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+    
+    
+            <div class="books">
+                <div class="TbookContent">
+                    <a><img src="{{url_for('static', filename='./assets/images/eloquentjavascript.png')}}"> </a>
+                </div>
+                <div class="nameLike">
+                    <p> Eloquent <br> Javascript </p> 
+                
+                    <i class="fa-regular fa-heart"></i>
+    
+                </div>
+                <p> Marijin Haverbeke</p>
+                <div class="nameLove">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+    
+            <div class="books">
+                <div class="TbookContent">
+                    <a><img src="{{url_for('static', filename='./assets/images/kimgoodwin.png')}}"></a>
+                </div>
+                <div class="nameLike">
+                    <p> Designing For <br> The Digital... </p> 
+                
+                    <i class="fa-regular fa-heart"></i>
+    
+                </div>
+                <p> Kim Goodwin</p>
+                <div class="nameLove">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+    
+    
+            <div class="books">
+                <div class="TbookContent">
+                   <a> <img src="{{url_for('static', filename='./assets/images/changebydesign.png')}}"> </a>
+                </div>
+                <div class="nameLike">
+                    <p> Change <br> By Desing </p> 
+                
+                    <i class="fa-regular fa-heart"></i>
+    
+                </div>
+                <p> Tim Brown</p>
+                <div class="nameLove">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+
+
+    <p id="trending">
+        Trending
+    </p>
+
+    <div id="Trendingbooks">
+        <div class="books">
+            <div class="TbookContent">
+                <a><img src="{{url_for('static', filename='./assets/images/crossingthecasm.png')}}"> </a>
+            </div>
+            <div class="nameLike">
+                <p> Crossing <br> The Chasm </p> 
+            
+                <i class="fa-regular fa-heart"></i>
+
+            </div>
+            <p> Geoffrey More</p>
+            <div class="nameLove">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+
+
+        <div class="books">
+            <div class="TbookContent">
+               <a> <img src="{{url_for('static', filename='./assets/images/startattheend.png')}}"> </a>
+            </div>
+            <div class="nameLike">
+                <p> Start At <br> The End </p> 
+            
+                <i class="fa-regular fa-heart"></i>
+
+            </div>
+            <p> Matt Wallaert</p>
+            <div class="nameLove">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+
+        <div class="books">
+            <div class="TbookContent">
+               <a> <img src="{{url_for('static', filename='./assets/images/thecleancoder.png')}}"> </a>
+            </div>
+            <div class="nameLike">
+                <p> The Clean <br> Coder </p> 
+            
+                <i class="fa-regular fa-heart"></i>
+
+            </div>
+            <p> Robert Cecil</p>
+            <div class="nameLove">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+
+
+        <div class="books">
+            <div class="TbookContent">
+               <a> <img src="{{url_for('static', filename='./assets/images/hooked.png')}}"> </a>
+            </div>
+            <div class="nameLike">
+                <p> Hooked <br>  </p> 
+            
+                <i class="fa-regular fa-heart"></i>
+
+            </div>
+            <p> Nir Eyal</p>
+            <div class="nameLove">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer id="footer">
+       <div id="section7">
+        <div id="section7firstContainer">
+
+          <img src="../static/assets/images/EreadLogo.png"> 
+            <p> E-Reads </p>
+       
+        </div>
+
+        <div id="section7secondContainer">
+            <a href=""> ABOUT US </a> <a href=""> BOOKS </a> <a href="" > BLOG </a> <a href=""> CONTACT US </a>
+        </div>
+
+        <div id="section7thirdContainer">
+
+            <img src="../static/assets/images/facebook.png">
+            <img src="../static/assets/images/twitter.png">
+            <img src="../static/assets/images/linkedIn.png">
+        </div>
+
+        <div id="section7fourthContainer">
+
+            <p> &copy; E-readslibrary@info.com </p>
+        </div>
+
+        
+
+    </div>
+
+</footer>
+
+
+
+    </body>
+
+</html>

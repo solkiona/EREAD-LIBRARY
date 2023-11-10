@@ -1,0 +1,478 @@
+
+
+body{
+    height: 100vh;
+    /* border: 10px solid red; */
+
+}
+#section7, footer{
+    margin-bottom: 0px;
+    /* border: 2px solid red; */
+    bottom: 0px;
+    position: relative;
+    
+   
+}
+
+#menuSwitch{
+    display: none;
+}
+#main{
+    /* min-height: 60vh; */
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    /* border: 2px solid red; */
+}
+#plside{
+    /* height: inherit; */
+}
+
+a{
+    color: white;
+}
+#lside{
+    width: 300px;
+    /* min-height: 50vh; */
+    /* height: 1000px; */
+    background: #0D0C46;
+    display: flex;
+    justify-content: center;
+    height: 180vh;
+    /* border: 2px solid red; */
+    
+    /* align-items: center; */
+
+    /* border: 2px solid white; */
+    /* position: fixed; */
+    
+}
+
+
+#logo{
+    cursor: pointer;
+}
+
+#lside > #parentlside{
+    /* border: 2px solid green; */
+    gap: 100px;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid white; */
+    margin-top: 250px;
+}
+
+.lsideItem{
+    /* border: 1px solid pink; */
+}
+#lside > #parentlside > .lsideItem{
+color: #FFF;
+font-family: Poppins;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+display: flex;
+justify-content: left;
+align-items: center;
+gap: 15px;
+padding-left: 25px;
+}
+
+#logout{
+    color: #F00;
+}
+
+
+
+#rside{
+  width: 79vw;
+  /* border: 2px solid green; */
+  height: fit-content;
+}
+
+#search{
+    /* width: fit-content; */
+    position:  absolute;
+    
+    /* position: relative; */
+    margin-top: 50px;
+    right: 9%;
+    display: inline-flex;
+    
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* border: 2px solid #0D0C46; */
+    color: rgba(233, 226, 226, 0.5);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+#search > input{
+    border-radius: 8px;
+    padding: 16px 2px;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: bold
+
+    /* height: 100%; */
+    /* margin-top: 0px; */
+}
+
+
+#search > #submit{
+    /* position: absolute; */
+    right: 20px;
+    padding: 16px 2px;
+}
+#search > i{
+    z-index: 1;
+    /* position: static; */
+    /* border: 2px solid red; */
+    margin-left: -80px;
+    cursor: pointer;
+}
+
+
+#search-results{
+    /* position: absolute; */
+    /* color: red; */
+    margin-left: 50px;
+    margin-top: 200px;
+    margin-right: 8%;
+    text-align: justify;
+    /* border: 2px solid green; */
+    /* height: 250px; */
+}
+
+#booksearch > .books > .TbookContent{
+    width: 214px;
+    height: 214px;
+    overflow: hidden;
+    border-radius: 15px;
+    /* border: 2px solid red; */
+    margin-top: 20px;
+}
+#booksearch > .books {
+    /* border: 2px solid pink; */
+
+}
+
+#topbookcontainer{
+    margin-top: 150px;
+    /* border:2px solid red; */
+
+}
+#topicks{
+    /* position: absolute; */
+    margin-left: 50px;
+    color: #000;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    /* border: 2px solid red; */
+}
+
+#Topbooks{
+    margin-left: 50px;
+    
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    /* width:60vw; */
+    margin-right: 8%;
+    /* flex-wrap: wrap; */
+    overflow-x: auto;
+    gap: 20px;
+    padding-top: 30px;
+   
+}
+
+#Topbooks::-webkit-scrollbar{
+    width: 0;
+}
+
+#Topbooks > .books > .TbookContent{
+    width: 214px;
+    height: 214px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+#Topbooks > .books > .TbookContent > a > img{
+    width: 100%;
+    height: auto;
+}
+
+.nameLike{
+    display: flex;
+    /* border: 2px solid red; */
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.nameLike > p{
+color: #0D0C46;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 2px;
+}
+
+.nameLike > i{
+font-size: 24px;
+flex-shrink: 0;
+}
+.books > p{
+    padding-top: 10px;
+    padding-left: 10px;
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.nameLove > i:first-child{
+    color: rgb(33, 243, 33);
+}
+.nameLove{
+    padding-left: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    color: rgb(207, 202, 202);
+}
+
+.nameLove > i{
+    font-size: 24px;
+}
+
+
+#Trendingbooks{
+    margin-left: 50px;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    /* width:65vw; */
+    margin-right: 8%;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    padding-top: 30px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+   
+}
+
+#Trendingbooks::-webkit-scrollbar{
+    width: 0;
+}
+
+#Trendingbooks > .books > .TbookContent{
+    width: 214px;
+    height: 214px;
+    overflow: hidden;
+    border-radius: 15px;
+    
+}
+
+#Trendingbooks > .books > .TbookContent > a >img{
+    width: 100%;
+    height: auto;
+}
+
+
+#trending{
+    /* position: absolute; */
+    margin-top: 80px;
+    margin-left: 50px;
+    color: #000;
+    font-family: Inter;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+#profile{
+    /* border: 2px solid red; */
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    margin-top: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #0D0C46;
+    border-radius: 50%;
+    background-color: rgb(250, 196, 114);
+
+}
+#profile > h1{
+    /* color: red; */
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    align-self: center;
+    margin-top: 12.5px;
+    margin-left: -2.5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 800px){
+
+    #search{
+        margin-top: 120px;
+        /* border: 2px solid red; */
+    }
+
+    #menuSwitch{
+        display: block;
+    }
+
+    #nav{
+        /* border: 2px solid red; */
+        position: fixed;
+    }
+    #plside{
+        display: none;
+    }
+    #lside{
+        position: fixed;
+        /* display: none; */
+        height: 100vh;
+        margin-top: 98px;
+       
+    }
+
+    #plside{
+        /* border: 2px solid red; */
+    }
+    #footer > #section7{
+        
+        
+    }
+
+    #rside{
+        width: 100%;
+        /* border: 2px solid green; */
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+
+        gap: 100px;
+      }
+    #search{
+        position: static;
+        right: auto;
+        left: auto;
+       margin-left: auto;
+       margin-right: auto;
+        align-self: center;
+        /* border: 2px solid red; */
+        width: 90vw;
+        /* border: 2px solid red; */
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        margin-left: 0px;
+        padding-left: 0px;
+       
+
+    
+    }
+
+    #search > input{
+        /* padding: 1px 2px; */
+    }
+
+    #topicks{
+        margin: 50px;
+        /* border: 2px solid red; */
+        display: flex;
+        justify-content: center;
+    }
+    #Topbooks{
+        margin-left: 50px;
+        margin-top: 30px;
+        /* border: 2px solid red; */
+        display: flex;
+        justify-content: center;
+        /* width:65vw; */
+        margin-right: 82px;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding-top: 30px;
+       
+    }
+
+    #topbookcontainer{
+        margin-top: -250px;
+        /* border:2px solid red; */
+    
+    }
+    #trending{
+        margin-left: auto;
+        margin-right: auto;
+        /* border: 2px solid red; */
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    #Trendingbooks{
+        margin-left: 50px;
+        margin-top: -70px;
+        /* border: 2px solid red; */
+        display: flex;
+        justify-content: center;
+        /* width:65vw; */
+        margin-right: 82px;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding-top: 30px;
+        margin-bottom: 20px;
+       
+    }
+
+    #search-results{
+        margin-top: -80px;
+        margin-bottom: 150px;
+    }
+}

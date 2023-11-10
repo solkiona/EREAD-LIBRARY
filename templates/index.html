@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <link rel="stylesheet" href="../static/assets/homestyles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+
+        <script src="https://kit.fontawesome.com/475ea9865d.js" crossorigin="anonymous"></script>
+        <script src="../static/assets/homescripts.js" > </script>
+
+        <script src="https://unpkg.com/htmx.org@1.9.8" integrity="sha384-rgjA7mptc2ETQqXoYC3/zJvkU7K/aP44Y+z7xQuJiVnB/422P/Ak+F/AqFR7E4Wr" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+       <nav id="nav">
+
+        <div id="logo">
+     </div>
+
+        <div id="menuSwitch" onclick = "toggleMenu()">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </div>
+
+
+        <div id="menu">
+            <a href="#"> Home </a>
+            <a href="#aboutus"> About us </a>
+            <a href='#blogpost'>Blog</a>
+            <a href="{{url_for('dashboard')}}"> {%if user_id%}{{'Dashboard'}} {%endif%}</a>
+
+            <a id="signup"  href="{{url_for('login.login')}}"> Sign up </a>
+            
+            <a id="login" value="Login" 
+           href="{%if user_id%}{{url_for('login.logout')}}{%else%} {{url_for('login.login')}} {%endif%}"> {%if user_id%}
+           {{'Log Out'}}
+           {%else%}
+           {{'Login'}} 
+        {%endif%}
+    </a>
+
+        </div>
+
+       </nav>
+       <nav id="respNav" >
+        <section>
+            <a href="#"> Home </a>
+            <a href="#aboutus"> About us </a>
+            <a href='#blogpost'>Blog</a>
+            <a href="{{url_for('dashboard')}}"> {%if user_id%}{{'Dashboard'}} {%endif%}</a>
+
+            <a id="signup"  href="{{url_for('login.login')}}"> Sign up </a>
+            
+            <a id="login" value="Login" 
+           href="{{url_for('login.login')}}"> 
+           {%if user_id%}
+           {{'Log Out'}}
+           {%else%}
+           {{'Login'}} 
+        {%endif%}
+    </a>
+
+
+            <section>
+
+       </nav>
+<main>
+       <section id="section1">
+        <p id="heading"> TO SUCCEED <br>
+            YOU MUST READ </p>
+
+            <p> Not sure what to read next? <br>
+            Explore our catalog of <br>
+        public domain books.</p>
+        <form action='/dashboard'>
+        <input type="submit" value="Explore Now">
+        </form>
+       </section>
+       <section id="section2">
+
+            <div id="section2Div">
+            <p id="aboutus"> About E-Reads </p>
+                
+            <p>  
+                    The Library supports the research needs of  <br>newbies transitioning into tech.The Library <br>supports the research needs of newbies <br> transitioning into tech.The Library Supports <br>the research needs of newbies transitioning <br>into tech
+                </p>
+
+                <input type="button" value="Contact Us" />
+
+            </div>
+
+            <div id="section2ImgContainer">
+                <img id="section2Img" src="../static/assets/images/book.png">
+                <img id="ellipse" src="../static/assets/images/ellipse7.png" >
+            </div> 
+
+       </section>
+
+       <div class="seperator">
+       </div>
+
+
+    <section id="section3">
+
+            <p> Featured Books </p>
+
+            <p> Over 200,000 books to satisfy your book cravings </p>
+
+
+        <div class="innerContainer">
+            <div class="contentHolder"> 
+
+                <div class="flex">
+                    <img class="img" src="../static/assets/images/donNorman.png" />
+                    <p> 
+                        The Design of Everyday <br>Things is a book which <br> inspires designers in <br>their struggle for...
+
+                        <br>
+                        <br>
+
+                        <a href="#"> See More</a>
+                    </p>
+                </div>
+
+
+            </div>
+
+            <div class="contentHolder"> 
+
+                <div class="flex">
+                    <img class="img" src="../static/assets/images/javascriptPromise.png" />
+                    <p> 
+                        Developers who just began their career can now fall back to a piece for the best of tips, especially when stuck with...
+
+                        <br>
+                        <br>
+
+                        <a href="#"> See More</a>
+                    </p>
+                </div>
+
+
+            </div>
+
+            <div class="contentHolder"> 
+
+                <div class="flex">
+                    <img class="img" src="../static/assets/images/mobydick.jpg" />
+                    <p> 
+                        "Moby-Dick is a novel written by American author Herman Melville. It is considered one of the greatest novels in the English language...
+
+                        <br>
+                        <br>
+
+                        <a href="#"> See More</a>
+                    </p>
+                </div>
+
+
+            </div>
+
+
+            <div class="contentHolder"> 
+
+                <div class="flex">
+                    <img class="img" src="../static/assets/images/donNorman.png" />
+                    <p> 
+                        The Design of Everyday <br>Things is a book which <br> inspires designers in <br>their struggle for...
+
+                        <br>
+                        <br>
+
+                        <a href="#"> See More</a>
+                    </p>
+                </div>
+
+
+            </div>
+
+
+        </div>
+                    
+                
+
+          <div id="view"> 
+            <form action="">
+            <a id="viewAll" href="
+            {{url_for('dashboard')}}
+            "> View All Books </a>
+            </form>
+          </div>
+    </section>
+    
+   
+
+
+    
+    <div class="seperator"> </div>
+
+    <div id="Trending">
+
+        <p> Trending Tracks </p>
+
+        <p> View The Most Searched Tracks On Our Website </p>
+
+
+    </div>
+
+
+    
+    <div id="section4" >
+
+        <div id="section4Container" >
+
+            <div class="contentHolder2"> 
+    
+                <div class="flex2">
+                    <img class="img" src="../static/assets/images/ColorSwatch.png" />
+                    <p> Design </p>
+                    <p> 
+                        Begin Your Design Journey Today
+                    </p>
+                </div>
+    
+    
+            </div>
+    
+    
+    
+            <div class="contentHolder2"> 
+    
+                <div class="flex2">
+                    <img class="img" src="../static/assets/images/ChartSquareBar.png" />
+                    <p> Data Science </p>
+                    <p> 
+                        Begin Your Data Science Journey Today
+                    </p>
+                </div>
+    
+    
+            </div>
+    
+    
+            <div class="contentHolder2"> 
+    
+                <div class="flex2">
+                    <img class="img" src="../static/assets/images/Code.png" />
+
+                    <p> Web Development </p>
+                    <p> 
+                       Begin Your Web Development Journey Today
+                    </p>
+                </div>
+    
+    
+            </div>
+    
+    
+            <div class="contentHolder2"> 
+    
+                <div class="flex2">
+                    <img class="img" src="../static/assets/images/Briefcase.png" />
+
+                    <p> Digital Marketing  </p>
+                    <p> 
+                       Begin Your Digital Marketing Journey Today
+                    </p>
+                </div>
+    
+    
+            </div>
+    
+            
+    
+    
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <div id="section5" >
+
+        <p> What Our Students Say About Us </p>
+
+        <div id="section5Container" >
+
+            <div class="contentHolder3"> 
+    
+                <div class="flex3">
+                    <div class="flex3Wrapper">
+                    <img class="img" src="../static/assets/images/ellipse1.png" />
+                    
+                    <div class="section5Text">
+                    <p> Charles </p> 
+                    <p id="Designer"> Designer </p>
+                    </div>
+
+                    </div>
+
+                    <p> 
+                        “I believe in lifelong learning, and quality learning also. I am happy to have come across this platform. It has unleashed the potentials in me”.
+                    </p>
+                </div>
+    
+    
+            </div>
+
+
+            <div class="contentHolder3"> 
+    
+                <div class="flex3">
+                    <div class="flex3Wrapper">
+                    <img class="img" src="../static/assets/images/ellipse2.png" />
+                    
+                    <div class="section5Text">
+                    <p> Cynthia </p> 
+                    <p id="Designer"> Marketer </p>
+                    </div>
+                    
+                    </div>
+
+                    <p> 
+                        “I believe in lifelong learning, and quality learning also. I am happy to have come across this platform. It has unleashed the potentials in me”.
+                    </p>
+                </div>
+    
+    
+            </div>
+
+
+            <div class="contentHolder3"> 
+    
+                <div class="flex3">
+                    <div class="flex3Wrapper">
+                    <img class="img" src="../static/assets/images/ellipse3.png" />
+                    
+                    <div class="section5Text">
+                    <p> Kingsley </p> 
+                    <p id="Designer"> Developer </p>
+                    </div>
+                    
+                    </div>
+
+                    <p> 
+                        “I believe in lifelong learning, and quality learning also. I am happy to have come across this platform. It has unleashed the potentials in me”.
+                    </p>
+                </div>
+    
+    
+            </div>
+
+
+            <div class="contentHolder3"> 
+    
+                <div class="flex3">
+                    <div class="flex3Wrapper">
+                    <img class="img" src="../static/assets/images/ellipse4.png" />
+                    
+                    <div class="section5Text">
+                    <p> Mirabel </p> 
+                    <p id="Designer"> Support </p>
+                    </div>
+                    
+                    </div>
+
+                    <p> 
+                        “I believe in lifelong learning, and quality learning also. I am happy to have come across this platform. It has unleashed the potentials in me”.
+                    </p>
+                </div>
+    
+    
+            </div>
+
+           
+
+
+        </div>
+
+        <div id="scrollContainer">
+
+            <span id="scrollOne"> </span> <span id="scrollTwo"> </span> <span id="scrollThree"> </span> <span id="scrollFour"> </span>
+        </div>
+
+        <div id="section5ImageContainer"> 
+
+            <img src="../static/assets/images/amazon.png" />
+
+            <img src="../static/assets/images/flutterwave.png" />
+
+            <img src="../static/assets/images/google.png" />
+
+            <img src="../static/assets/images/zlib.png" />
+        </div>
+
+        
+
+
+
+    </div>
+   
+    <div id="section6">
+        <div id="section6firstContainer">
+            <div id="innersection6firstContainer" >
+                <p id="blogpost"> Blog Posts </p>
+                <p> Gain enlightenment about your tech career </p>
+            </div>
+
+            <a href="/blog"><p > Browse All > </p></a>
+    
+
+        </div>
+
+        <div id="section6secondContainer" >
+            <div id="section6imagecontainer">
+                <img src="../static/assets/images/rectangleimg.jpeg"> 
+
+                <div id="section6iconContainer">
+                <img src="../static/assets/images/CalendarOutline.png">
+                <p> Jack Williams </p>  <img src="../static/assets/images/UserOutline.png"> <p> Jan 5, 2023 </p>
+                </div>
+
+                <p> How I developed as a website Developer ... </p>
+
+            </div>
+
+            <div id="section6imagecontainer">
+                <img src="../static/assets/images/rectangleimg2.jpg"> 
+
+                <div id="section6iconContainer">
+                <img src="../static/assets/images/CalendarOutline.png">
+                <p> Tom Dennis </p>  <img src="../static/assets/images/UserOutline.png"> <p> Jan 5, 2023 </p>
+                </div>
+
+                <p> How I developed as a Graphic Designer ... </p>
+
+            </div>
+
+            <div id="section6imagecontainer">
+                <img src="../static/assets/images/rectangleimg3.jpeg"> 
+
+                <div id="section6iconContainer">
+                <img src="../static/assets/images/CalendarOutline.png">
+                <p> Tonia Adebisi</p>  <img src="../static/assets/images/UserOutline.png"> <p> Jan 5, 2023 </p>
+                </div>
+
+                <p> How I developed as a Digital Marketer ... </p>
+
+            </div>
+
+
+            <div id="section6imagecontainer">
+                <img src="../static/assets/images/rectangleimg4.jpg"> 
+
+                <div id="section6iconContainer">
+                <img src="../static/assets/images/CalendarOutline.png">
+                <p> Daniel Bones </p>  <img src="../static/assets/images/UserOutline.png"> <p> Jan 5, 2023 </p>
+                </div>
+
+                <p> How I Supported a good number of clients ... </p>
+
+            </div>
+
+          
+
+        </div>
+        <div id="scrollContainer">
+
+            <span id="scrollOne"> </span> <span id="scrollTwo"> </span> <span id="scrollThree"> </span> <span id="scrollFour"> </span>
+        </div>
+
+    </div>
+    <div id="section7">
+        <div id="section7firstContainer">
+
+          <img src="../static/assets/images/EreadLogo.png"> 
+            <p> E-Reads </p>
+       
+        </div>
+
+        <div id="section7secondContainer">
+            <a href="#aboutus"> ABOUT US </a>  <a href="/blog" > BLOG </a> <a href="#aboutus"> CONTACT US </a>
+        </div>
+
+        <div id="section7thirdContainer">
+
+            <img src="../static/assets/images/facebook.png">
+            <img src="../static/assets/images/twitter.png">
+            <img src="../static/assets/images/linkedIn.png">
+        </div>
+
+        <div id="section7fourthContainer">
+
+            <p> &copy; E-readslibrary@info.com </p>
+        </div>
+
+        
+
+    </div>
+    
+
+</main>
+
+
+<script>
+
+    {%if user_id%}
+
+    const elem = document.getElementById('login').value = 'Log Out';
+
+    const elem2 = document.getElementById('signup').style.display='none';
+
+  
+  
+    {%endif%}
+</script>
+     
+     
+    </body>
+</html>
+
+
+

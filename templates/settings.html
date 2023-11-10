@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <link rel="stylesheet" href="../static/assets/homestyles.css">
+
+        <link rel="stylesheet" href="../static/assets/dashboard.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+        <link rel="stylesheet" href="../static/assets/base.css">
+        <link rel="stylesheet" href="../static/assets/settings.css">
+        <script src="https://kit.fontawesome.com/475ea9865d.js" crossorigin="anonymous"></script>
+
+
+       
+        <script src="../static/assets/homescripts.js" > </script>
+
+        <script src="https://kit.fontawesome.com/475ea9865d.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+       <nav id="nav">
+
+        <div id="logo">
+     </div>
+
+        <div id="menuSwitch" onclick = "toggleMenu()">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </div>
+
+
+        <div id="menu">
+            <a> Home </a>
+            <a> About us </a>
+            <a> Blog </a>
+            <a> Dashboard </a>
+            <svg  onmouseover = "showdropdown()" id="profileIcon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M6.828 23.7387C9.62589 22.1572 12.7861 21.3285 16 21.3333C19.3333 21.3333 22.4627 22.2067 25.172 23.7387M20 13.3333C20 14.3942 19.5786 15.4116 18.8284 16.1618C18.0783 16.9119 17.0609 17.3333 16 17.3333C14.9391 17.3333 13.9217 16.9119 13.1716 16.1618C12.4214 15.4116 12 14.3942 12 13.3333C12 12.2725 12.4214 11.2551 13.1716 10.5049C13.9217 9.75476 14.9391 9.33333 16 9.33333C17.0609 9.33333 18.0783 9.75476 18.8284 10.5049C19.5786 11.2551 20 12.2725 20 13.3333V13.3333ZM28 16C28 17.5759 27.6896 19.1363 27.0866 20.5922C26.4835 22.0481 25.5996 23.371 24.4853 24.4853C23.371 25.5996 22.0481 26.4835 20.5922 27.0866C19.1363 27.6896 17.5759 28 16 28C14.4241 28 12.8637 27.6896 11.4078 27.0866C9.95189 26.4835 8.62902 25.5996 7.51472 24.4853C6.40042 23.371 5.5165 22.0481 4.91345 20.5922C4.31039 19.1363 4 17.5759 4 16C4 12.8174 5.26428 9.76516 7.51472 7.51472C9.76516 5.26428 12.8174 4 16 4C19.1826 4 22.2348 5.26428 24.4853 7.51472C26.7357 9.76516 28 12.8174 28 16Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div id="dropdown"  >
+                    <div class="mouth" > </div>
+                        <a  onmouseout = "unshowdropdown()" > Logout </a>
+                </div>
+        </div>
+
+       </nav>
+       <nav id="respNav" >
+        <section>
+        <a> Home </a>
+            <a> About us </a>
+            <a> Blog </a>
+            <a> Dashboard </a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M6.828 23.7387C9.62589 22.1572 12.7861 21.3285 16 21.3333C19.3333 21.3333 22.4627 22.2067 25.172 23.7387M20 13.3333C20 14.3942 19.5786 15.4116 18.8284 16.1618C18.0783 16.9119 17.0609 17.3333 16 17.3333C14.9391 17.3333 13.9217 16.9119 13.1716 16.1618C12.4214 15.4116 12 14.3942 12 13.3333C12 12.2725 12.4214 11.2551 13.1716 10.5049C13.9217 9.75476 14.9391 9.33333 16 9.33333C17.0609 9.33333 18.0783 9.75476 18.8284 10.5049C19.5786 11.2551 20 12.2725 20 13.3333V13.3333ZM28 16C28 17.5759 27.6896 19.1363 27.0866 20.5922C26.4835 22.0481 25.5996 23.371 24.4853 24.4853C23.371 25.5996 22.0481 26.4835 20.5922 27.0866C19.1363 27.6896 17.5759 28 16 28C14.4241 28 12.8637 27.6896 11.4078 27.0866C9.95189 26.4835 8.62902 25.5996 7.51472 24.4853C6.40042 23.371 5.5165 22.0481 4.91345 20.5922C4.31039 19.1363 4 17.5759 4 16C4 12.8174 5.26428 9.76516 7.51472 7.51472C9.76516 5.26428 12.8174 4 16 4C19.1826 4 22.2348 5.26428 24.4853 7.51472C26.7357 9.76516 28 12.8174 28 16Z" stroke="rgb(206, 203, 203)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            <section>
+
+       </nav>
+
+
+
+       <main>
+
+        <div id="childcontainer">
+            <div id="settingslside">
+
+                <p> MY PROFILE: </p>
+
+                <div id="imgdiv">
+                <img src="" alt="img"/>
+                </div>
+                <p> ADEBAYO ABAYOMI </p>
+                <p> UI/UX DESIGNER </p>
+
+            </div>
+
+            <div id="settingsrside">
+
+                <form>
+                    <div id="name">
+                    
+                        <div>
+                        <label> FIRST NAME</label>
+                        <input type="text" >
+                        </div>
+                        
+                        <div>
+                        <label> LAST NAME</label>
+                        <input type="text" >
+                        </div>
+
+                    </div>
+
+                    <label> DATE OF BIRTH</label>
+                    <input type="text" >
+                    <label> PHONE NUMBER</label>
+                    <input type="text" >
+                    <label> EMAIL ADDRESS</label>
+                    <input type="text" >
+
+                    <label> HOME ADDRESS</label>
+                    <input type="text" >
+
+                    <input type="submit" id="prfsubmit" value="Save" >
+                </form>
+
+            </div>
+            
+
+        </div>
+
+
+       </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <footer>
+        <div id="section7">
+         <div id="section7firstContainer">
+ 
+           <img src="../static/assets/images/EreadLogo.png"> 
+             <p> E-Reads </p>
+        
+         </div>
+ 
+         <div id="section7secondContainer">
+            <a href=""> HOME </a><a href=""> ABOUT US </a> <a href="" > BLOG </a> <a href=""> CONTACT US </a>
+         </div>
+ 
+         <div id="section7thirdContainer">
+ 
+             <img src="../static/assets/images/facebook.png">
+             <img src="../static/assets/images/twitter.png">
+             <img src="../static/assets/images/linkedIn.png">
+         </div>
+ 
+         <div id="section7fourthContainer">
+ 
+             <p> &copy; E-readslibrary@info.com </p>
+         </div>
+ 
+         
+ 
+     </div>
+ 
+
+ </footer>
+
+ <script>
+
+    function showdropdown(){
+
+        let dropdown = document.getElementById('dropdown');
+        dropdown.style.display = "flex";
+
+    }
+
+    function unshowdropdown(){
+        let dropdown = document.getElementById('dropdown');
+        dropdown.style.display = "none";
+    }
+   
+
+    function handleWindow(){
+    
+        const element = document.getElementById('respNav');
+        const windowWidth = window.innerWidth;
+
+        const element2 = document.getElementById('section2ImgContainer')
+
+        if (windowWidth  >= 920){
+
+            element.style.display = "none";
+            
+        }
+    }
+
+    window.addEventListener('resize', handleWindow);
+
+ 
+ </script>
+ 
+     </body>
+ 
+ </html>
