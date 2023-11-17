@@ -102,12 +102,13 @@ line-height: normal;
 
 }
 #basesection2rightTXT{
-    width: 500px;
+    max-width: 500px;
     /* border: 2px solid red; */
     line-height: 1.5;
     text-align: justify;
     margin-top: 15px;
     font-family: poppins;
+    
 }
 
 #download{

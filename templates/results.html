@@ -1,0 +1,24 @@
+
+<h1 style="padding-left: 25px; color: gray"> Search Results </h1>
+<div style="  display: flex; overflow-x: auto; display: flex; flex-direction: row; margin: 20px;gap: 10px; padding-right: 50px; ">
+
+
+{%for result in results %}
+
+
+
+    <div style="padding: 10px; width: fit-content; width: 214px">
+    <a href="{{url_for('base', book_id=result.id)}}">
+
+        <img 
+        style="height: 214px; width: 214px; border-radius: 15px"
+        src="{{url_for('static', filename= './assets/images/'+ result.coverImage)}}">
+
+    </a>
+    <h2> {{result.bookTitle}} </h2>
+    <h3> by: {{result.bookAuthor}} </h3>
+    </div>
+
+{%endfor%}
+
+</div>

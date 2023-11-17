@@ -39,6 +39,8 @@ a{
     display: flex;
     justify-content: center;
     height: 180vh;
+    position: sticky;
+
     /* border: 2px solid red; */
     
     /* align-items: center; */
@@ -55,7 +57,7 @@ a{
 
 #lside > #parentlside{
     /* border: 2px solid green; */
-    gap: 100px;
+    gap: 50px;
     display: flex;
     flex-direction: column;
     /* border: 2px solid white; */
@@ -77,6 +79,7 @@ justify-content: left;
 align-items: center;
 gap: 15px;
 padding-left: 25px;
+/* border: 2px solid red; */
 }
 
 #logout{
@@ -231,9 +234,13 @@ line-height: normal;
 letter-spacing: 2px;
 }
 
-.nameLike > i{
+.nameLike > a > i{
 font-size: 24px;
 flex-shrink: 0;
+}
+
+.nameLike > a{
+cursor: pointer;
 }
 .books > p{
     padding-top: 10px;

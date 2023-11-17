@@ -22,6 +22,8 @@
 
         <script src="https://kit.fontawesome.com/475ea9865d.js" crossorigin="anonymous"></script>
 
+        <script src="https://unpkg.com/htmx.org@1.9.8" integrity="sha384-rgjA7mptc2ETQqXoYC3/zJvkU7K/aP44Y+z7xQuJiVnB/422P/Ak+F/AqFR7E4Wr" crossorigin="anonymous"></script>
+
     </head>
     <body>
        <nav id="nav">
@@ -64,23 +66,17 @@
             </div>
 
             <div class="lsideItem">
-                <img src="{{url_for('static', filename='./assets/images/Dbook.png')}}" /> <a href=""> Add Books </a>
+                <img src="{{url_for('static', filename='./assets/images/Dbook.png')}}" /> <a href="{{url_for('create')}}"> Add Books </a>
             </div>
 
             <div class="lsideItem">
                 <img src="{{url_for('static', filename='./assets/images/Favorite.png')}}" /> <a href="{{url_for('favorite')}}"> Favourite </p>
             </div>
 
-        <!--
-
             <div class="lsideItem">
-                <img src="../static/assets/images/Settings.png" /> <p> Setting </p>
-            </div> 
-
-
-        --> 
-
-
+                <img src="../static/assets/images/Settings.png" /> <a href="{{url_for('settings')}}"> Settings
+                </a> 
+            </div>
             <div class="lsideItem">
                 <img src="../static/assets/images/logout.png" /> <a  id="logout" href="{{url_for('login.logout')}}"> Log Out </a>
             </div>
@@ -99,9 +95,15 @@
 
 
 
+
 <div id="rside">
     <div id="search">
-        <input type="text" placeholder="Search for books" >
+        <input type="text" placeholder="Search for books" 
+        name ='q'
+        hx-trigger="keyup changed delay:500ms"  hx-target="#search-results"
+        hx-get="{{url_for('trigger_delay')}}"
+        
+        >
         <i class="fa-solid fa-magnifying-glass" style="color: rgba(233, 226, 226, 0.5);"></i>
     </div>
     
@@ -110,23 +112,30 @@
     
     </div>
 
-    
-    <div id="topbookcontainer">
+    {%block favorite%}
 
+    <div id="topbookcontainer">
+        <p id="favorite-results"> </p>
         <p id="topicks"> Top Picks </p>
         <div id="Topbooks">
         
             <div class="books">
                 <div class="TbookContent" hx-trigger='click' >
-                    <a> <img src="{{url_for('static', filename= './assets/images/datastrategy.png')}}">
+                    <a href="{{url_for('base', book_id=1)}}"> <img src="{{url_for('static', filename= './assets/images/datastrategy.png')}}">
                     </a>
-                    
+                    <!--href="{{url_for('toggle_favorite', book_id=1)}}"-->
                 </div>
                 <div class="nameLike">
                     <p> Data <br> Strategy </p> 
                 
-                    <i class="fa-regular fa-heart"></i>
-    
+                <a hx-trigger="click"  hx-target="#favorite-results"
+                hx-get="{{url_for('toggle_favorite', book_id=1)}}"
+                style="display: flex; justify-content: center; width: auto;  color: black;" onclick="changeColor1()">
+                    <i id="love1" class="fa-solid fa-heart" style="{% set favorite_book = user.favorite_books|selectattr('id', '==', 1)|first %}{% if favorite_book %}color: red;{% else %}color: grey;{% endif %}"
+                    >
+                    </i>
+                </a>
+                   
                 </div>
                 <p> Bernard Marr</p>
                 <div class="nameLove">
@@ -137,12 +146,18 @@
     
             <div class="books">
                 <div class="TbookContent">
-                    <a><img src="{{url_for('static', filename='./assets/images/eloquentjavascript.png')}}"> </a>
+                    <a href="{{url_for('base', book_id=2)}}"><img src="{{url_for('static', filename='./assets/images/eloquentjavascript.png')}}"> </a>
                 </div>
                 <div class="nameLike">
                     <p> Eloquent <br> Javascript </p> 
                 
-                    <i class="fa-regular fa-heart"></i>
+                    <a hx-trigger="click"  hx-target="#favorite-results"
+                hx-get="{{url_for('toggle_favorite', book_id=2)}}"
+                style="display: flex; justify-content: center; width: auto;  color: black;" onclick="changeColor2()">
+                    <i id="love2" class="fa-solid fa-heart" style="{% set favorite_book = user.favorite_books|selectattr('id', '==', 2)|first %}{% if favorite_book %}color: red;{% else %}color: grey;{% endif %}"
+                    >
+                    </i>
+                </a>
     
                 </div>
                 <p> Marijin Haverbeke</p>
@@ -153,12 +168,18 @@
     
             <div class="books">
                 <div class="TbookContent">
-                    <a><img src="{{url_for('static', filename='./assets/images/kimgoodwin.png')}}"></a>
+                    <a href="{{url_for('base', book_id=3)}}"><img src="{{url_for('static', filename='./assets/images/kimgoodwin.png')}}"></a>
                 </div>
                 <div class="nameLike">
                     <p> Designing For <br> The Digital... </p> 
                 
-                    <i class="fa-regular fa-heart"></i>
+                    <a hx-trigger="click"  hx-target="#favorite-results"
+                    hx-get="{{url_for('toggle_favorite', book_id=3)}}"
+                    style="display: flex; justify-content: center; width: auto;  color: black;" onclick="changeColor3()">
+                        <i id="love3" class="fa-solid fa-heart" style="{% set favorite_book = user.favorite_books|selectattr('id', '==', 3)|first %}{% if favorite_book %}color: red;{% else %}color: grey;{% endif %}"
+                        >
+                        </i>
+                    </a>
     
                 </div>
                 <p> Kim Goodwin</p>
@@ -170,12 +191,18 @@
     
             <div class="books">
                 <div class="TbookContent">
-                   <a> <img src="{{url_for('static', filename='./assets/images/changebydesign.png')}}"> </a>
+                   <a href="{{url_for('base', book_id=4)}}"> <img src="{{url_for('static', filename='./assets/images/changebydesign.png')}}"> </a>
                 </div>
                 <div class="nameLike">
                     <p> Change <br> By Desing </p> 
                 
-                    <i class="fa-regular fa-heart"></i>
+                    <a hx-trigger="click"  hx-target="#favorite-results"
+                    hx-get="{{url_for('toggle_favorite', book_id=4)}}"
+                    style="display: flex; justify-content: center; width: auto;  color: black;" onclick="changeColor4()">
+                        <i id="love4" class="fa-solid fa-heart" style="{% set favorite_book = user.favorite_books|selectattr('id', '==', 4)|first %}{% if favorite_book %}color: red;{% else %}color: grey;{% endif %}"
+                        >
+                        </i>
+                    </a>
     
                 </div>
                 <p> Tim Brown</p>
@@ -197,12 +224,18 @@
     <div id="Trendingbooks">
         <div class="books">
             <div class="TbookContent">
-                <a><img src="{{url_for('static', filename='./assets/images/crossingthecasm.png')}}"> </a>
+                <a href="{{url_for('base', book_id=5)}}"><img src="{{url_for('static', filename='./assets/images/crossingthecasm.png')}}"> </a>
             </div>
             <div class="nameLike">
                 <p> Crossing <br> The Chasm </p> 
             
-                <i class="fa-regular fa-heart"></i>
+                <a hx-trigger="click"  hx-target="#favorite-results"
+                hx-get="{{url_for('toggle_favorite', book_id=5)}}"
+                style="display: flex; justify-content: center; width: auto;  color: black;" onclick="changeColor5()">
+                    <i id="love5" class="fa-solid fa-heart" style="{% set favorite_book = user.favorite_books|selectattr('id', '==', 5)|first %}{% if favorite_book %}color: red;{% else %}color: grey;{% endif %}"
+                    >
+                    </i>
+                </a>
 
             </div>
             <p> Geoffrey More</p>
@@ -214,12 +247,18 @@
 
         <div class="books">
             <div class="TbookContent">
-               <a> <img src="{{url_for('static', filename='./assets/images/startattheend.png')}}"> </a>
+               <a href="{{url_for('base', book_id=6)}}"> <img src="{{url_for('static', filename='./assets/images/startattheend.png')}}"> </a>
             </div>
             <div class="nameLike">
                 <p> Start At <br> The End </p> 
             
-                <i class="fa-regular fa-heart"></i>
+                <a hx-trigger="click"  hx-target="#favorite-results"
+                hx-get="{{url_for('toggle_favorite', book_id=6)}}"
+                style="display: flex; justify-content: center; width: auto;  color: black;" onclick="changeColor6()">
+                    <i id="love6" class="fa-solid fa-heart" style="{% set favorite_book = user.favorite_books|selectattr('id', '==', 6)|first %}{% if favorite_book %}color: red;{% else %}color: grey;{% endif %}"
+                    >
+                    </i>
+                </a>
 
             </div>
             <p> Matt Wallaert</p>
@@ -230,12 +269,18 @@
 
         <div class="books">
             <div class="TbookContent">
-               <a> <img src="{{url_for('static', filename='./assets/images/thecleancoder.png')}}"> </a>
+               <a href="{{url_for('base', book_id=7)}}"> <img src="{{url_for('static', filename='./assets/images/thecleancoder.png')}}"> </a>
             </div>
             <div class="nameLike">
                 <p> The Clean <br> Coder </p> 
             
-                <i class="fa-regular fa-heart"></i>
+                <a hx-trigger="click"  hx-target="#favorite-results"
+                hx-get="{{url_for('toggle_favorite', book_id=7)}}"
+                style="display: flex; justify-content: center; width: auto;  color: black;" onclick="changeColor7()">
+                    <i id="love7" class="fa-solid fa-heart" style="{% set favorite_book = user.favorite_books|selectattr('id', '==', 7)|first %}{% if favorite_book %}color: red;{% else %}color: grey;{% endif %}"
+                    >
+                    </i>
+                </a>
 
             </div>
             <p> Robert Cecil</p>
@@ -247,12 +292,19 @@
 
         <div class="books">
             <div class="TbookContent">
-               <a> <img src="{{url_for('static', filename='./assets/images/hooked.png')}}"> </a>
+
+               <a href="{{url_for('base', book_id=8)}}" > <img src="{{url_for('static', filename='./assets/images/hooked.png')}}"> </a>
             </div>
             <div class="nameLike">
                 <p> Hooked <br>  </p> 
             
-                <i class="fa-regular fa-heart"></i>
+                <a hx-trigger="click"  hx-target="#favorite-results"
+                hx-get="{{url_for('toggle_favorite', book_id=8)}}"
+                style="display: flex; justify-content: center; width: auto;  color: black;" onclick="changeColor8()">
+                    <i id="love8" class="fa-solid fa-heart" style="{% set favorite_book = user.favorite_books|selectattr('id', '==', 8)|first %}{% if favorite_book %}color: red;{% else %}color: grey;{% endif %}"
+                    >
+                    </i>
+                </a>
 
             </div>
             <p> Nir Eyal</p>
@@ -261,8 +313,11 @@
             </div>
         </div>
     </div>
+    {%endblock%}
 
 </div>
+
+
 
 
 </main>
@@ -271,6 +326,86 @@
 
 
 
+<script>
+
+function changeColor1(){
+    const elemlove = document.getElementById('love1');
+    if(elemlove.style.color == 'red'){
+        elemlove.style.color = 'gray'
+    } else{
+        elemlove.style.color ='red'
+    }
+}
+
+function changeColor2(){
+    const elemlove = document.getElementById('love2');
+    if(elemlove.style.color == 'red'){
+        elemlove.style.color = 'gray'
+    } else{
+        elemlove.style.color ='red'
+    }
+}
+
+function changeColor3(){
+    const elemlove = document.getElementById('love3');
+    if(elemlove.style.color == 'red'){
+        elemlove.style.color = 'gray'
+    
+    } else{
+        elemlove.style.color ='red'
+    }
+}
+
+function changeColor4(){
+    const elemlove = document.getElementById('love4');
+    if(elemlove.style.color == 'red'){
+        elemlove.style.color = 'gray'
+    
+    } else{
+        elemlove.style.color ='red'
+    }
+}
+
+function changeColor5(){
+    const elemlove = document.getElementById('love5');
+    if(elemlove.style.color == 'red'){
+        elemlove.style.color = 'gray'
+    
+    } else{
+        elemlove.style.color ='red'
+    }
+}
+
+function changeColor6(){
+    const elemlove = document.getElementById('love6');
+    if(elemlove.style.color == 'red'){
+        elemlove.style.color = 'gray'
+    
+    } else{
+        elemlove.style.color ='red'
+    }
+}
+
+function changeColor7(){
+    const elemlove = document.getElementById('love7');
+    if(elemlove.style.color == 'red'){
+        elemlove.style.color = 'gray'
+    
+    } else{
+        elemlove.style.color ='red'
+    }
+}
+
+function changeColor8(){
+    const elemlove = document.getElementById('love8');
+    if(elemlove.style.color == 'red'){
+        elemlove.style.color = 'gray'
+    
+    } else{
+        elemlove.style.color ='red'
+    }
+}
+</script>
 
 
 

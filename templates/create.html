@@ -1,0 +1,61 @@
+{%extends 'dashboard.html'%}
+
+
+{%block favorite%}
+ 
+
+<h1 style="width: auto; margin-left: 100px; padding-left: 30px;">
+    Add a New Book
+</h1>
+
+<form method="post"  id="addBook" style=" padding: 30px; box-sizing: border-box; width: 60%; margin-left: 100px; padding-top: 0px; display: flex; flex-direction: column; gap: 10px; background: rgba(193, 192, 196, 0.1); border-radius: 18px;" 
+action="/fileupload/" enctype="multipart/form-data">
+    
+
+    <p>
+       
+<input type="text" name="bookTitle"
+        placeholder="Book Title" class="binput" style="padding: 16px 32px; margin-top: 50px;border-radius: 8px; border: 1px solid gray; width: 100%; box-sizing: border-box; text-align: left; background: none;">
+
+    </p>
+
+    <p>
+        <input type="text" name="bookAuthor" placeholder="Book Author" class="binput"
+        style="padding: 16px 32px; margin-top: 50px;border-radius: 8px; border: 1px solid gray; width: 100%; box-sizing: border-box;text-align: left; background: none;"
+        >
+    </p>
+
+    <!--<p>
+        <input type="text" name="yearPublished" placeholder="Year Published" class="binput"
+        style="padding: 16px 32px; margin-top: 50px;border-radius: 8px; border: 1px solid gray; width: 100%; box-sizing: border-box;text-align: left; background: none;"
+        >
+    </p> -->
+
+    <p style="padding: 10px;">
+        <label  style="padding-left: 5px"> Book Cover Image</label> <span style="color: rgb(159, 2, 112); font-size: 10px;" id="file1"> * Required file </span>
+        <input type="file" name="file1" placeholder="Cover Image" class="binput"  required>
+    </p> 
+
+
+    <p style="padding: 10px;">
+        <label  style="padding-left: 5px"> Attach File (PDF) </label> <span style="color:  rgb(159, 2, 112); font-size: 10px;" id="file2"> * Required file </span>
+        <input type="file" name="file2"  placeholder="Attach File" class="binput"  required>
+        </p>
+
+        <p>
+    
+                <textarea name="description" placeholder="Description" rows="15" cols="60" class="binput" 
+                style="padding: 16px 32px; margin-top: 50px;border-radius: 8px; border: 1px solid gray; width: 100%; box-sizing: border-box;text-align: left; background: none"
+                > </textarea>
+            </p>
+        
+            <p> <button type="submit" value="Upload" 
+                style="padding: 16px 32px; border-radius: 12px; border: none; background: #200C6E ; color: white; cursor: pointer"
+                > Submit </button>
+            </p>
+
+        </div>
+        </form>
+   
+
+{%endblock%}

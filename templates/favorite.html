@@ -1,0 +1,44 @@
+{%extends 'dashboard.html'%}
+
+{%block favorite%}
+
+
+<p id="topicks" style="margin-top: -60px;">Favorite Books </p>
+
+<div style="display: flex;justify-content: space-between;flex-wrap:wrap; gap: 10px;">
+
+{%for book in books%}
+
+
+
+    <div id="topbookcontainer" style=" width: 300px; margin-top: 2px; ">
+
+        
+        <div id="Topbooks">
+    <div class="books">
+        <div class="TbookContent" hx-trigger='click' >
+            <a href="{{url_for('base', book_id=book.id)}}"> <img src="{{url_for('static', filename='uploads/'+ book.coverImage )}}">
+            </a>
+            
+        </div>
+        <div class="nameLike">
+            <p> {{book.bookTitle.split(' ', 1)[0]}} <br> {{book.bookTitle.split(' ', 1)[1]}} </p> 
+           
+            <i style='font-size: 24px; color: red;' class="fa-solid fa-heart"></i> 
+
+        </div>
+        <p> {{book.bookAuthor}}</p>
+        <div class="nameLove">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+
+{%endfor%}
+
+</div>
+
+{%endblock%}
